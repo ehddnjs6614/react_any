@@ -2,10 +2,18 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { Button, Card, Row } from 'react-bootstrap'
 import './Card.css'
-import Detail from './Detail'
+
 import axios from 'axios'
 
 function Cards() {
+  // eslint-disable-next-line no-lone-blocks
+  {
+    /*
+
+  useState로 빈배열을 만들어놓고 useEffect사용해 fetch로 불러온 api를 빈배열에 담아관리한다.
+
+  */
+  }
   const [test1, setTest1] = useState([])
   console.log(test1)
 
@@ -23,23 +31,39 @@ function Cards() {
   return (
     <div style={{ paddingTop: 56 }}>
       <div style={{ paddingTop: 56 }} className="container">
-        <h2>귀멸의 칼날 인물들</h2>
+        <h1>귀멸의 칼날 인물들</h1>
         <hr />
+
+        {/*
+        불러온 api정보를 화면에뿌려주기위해 map함수를 돌려 뿌려줌.
+        */}
+
         <Row xs={1} md={2} className="g-4">
           {test1.map(i => (
             <Card style={{ marginTop: 10 }} className="col-md-4" key={i.id}>
               <Card.Img variant="top" src={i.img} alt="" />
               <Card.Body>
                 <Card.Title>
-                  <h1> {i.name}</h1>
+                  <h2> {i.name}</h2>
                 </Card.Title>
-                <Card.Text> {i.title}</Card.Text>
-                <Card.Text> {i.title2}</Card.Text>
+                <Card.Text>
+                  <h3>{i.title}</h3>
+                </Card.Text>
+                <Card.Text>
+                  <h4>{i.title2}</h4>
+                </Card.Text>
               </Card.Body>
             </Card>
           ))}
         </Row>
+
+        {/*
+
+          하단 더 보기 button 을 클릭하면 axios로 불러온 api정보들을 출력.        
+        
+        */}
         <Button
+          style={{ marginTop: 15 }}
           className="btn"
           variant="primary"
           onClick={() => {
