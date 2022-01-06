@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# 귀멸의 칼날 간단한 인물소개 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## !개발목표
 
-## Available Scripts
+`Postman을 사용해 가짜서버(MockServer) 를 직접 만들어서 API를 활용해보자 라는 목표를 가지고 구현하게되었습니다.`
 
-In the project directory, you can run:
+## 사용기술
 
-### `npm start`
+- React
+- css
+- Media Query
+- react-bootstrap
+- react-router-dom@5버전
+- Axios
+- Fetch
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 주요기능
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- MockServer활용해 만들어놓은 API 를 Fetch , Axios을 사용해 불러온 데이터를 `map()`을 활용해 화면에뿌려준다.
 
-### `npm test`
+***
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+(MockServer로 만든 간단한 APi)
+![image](https://user-images.githubusercontent.com/81339388/148311024-cf81e6a4-9962-40cc-b0fe-baed30524752.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+***
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1.불러온 API를 담기위한 그릇(State)을 만들어놓는다. 
 
-### `npm run eject`
+2.Effect, fetch를 사용해 메인 인물들을 불러온다 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3.만들어놓은 State에 저장
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![image](https://user-images.githubusercontent.com/81339388/148311251-46454407-1c13-442a-8170-fc6404db5bac.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+***
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+(불러온 API정보를 화면에 뿌려주기위해 `map()`사용해 화면에 뿌려줌.)
 
-## Learn More
+![image](https://user-images.githubusercontent.com/81339388/148312817-baf08bd8-35c9-4b6c-9a54-f85ffbd7e7d1.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+***
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+(하단에 더 보기 Button 클릭하면 Axios로 불러온 APi들을 출력)
 
-### Analyzing the Bundle Size
+![image](https://user-images.githubusercontent.com/81339388/148312970-9b12d004-d267-438e-84fb-76a09003b6d6.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+***
 
-### Making a Progressive Web App
+## 개선사항 & 느낀점
+ - 부족한 기능
+ - 심심한 UI 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+이번에 해본 작고소중한 프로젝트는.. MockServer를 이용해 API를 만들어서 이것저것 뿌려주고싶었는데.
+그러지못한 아쉬움.. 그래도 간단하게라도 체험은해봤으니 다음에는 Server에대해서 좀더 deep하게 접근해보고 다시 최상의퀄리티로 바꿔야겠다.
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
